@@ -1,0 +1,6 @@
+-cpu=rx600
+-fpu
+-lang=c
+-head=runtime,math,stdio,stdlib,string,new
+-output="Bycicle_RX63N.lib"
+-nologo
