@@ -9,7 +9,7 @@
 #define PWM_H_
 #define Max_Volt				12.0
 #define Max_Duty				98.0
-
+static float volt_signal;
 /*
  * NOTE:
  * con le impostazioni della MTU2 nella funzione PWM_Init(),
