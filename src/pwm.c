@@ -14,7 +14,7 @@
 #include "pwm.h"
 volatile float duty1;
 int val1;
-float volt_signal;
+
 
 
 /*
