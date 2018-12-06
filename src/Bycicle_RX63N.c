@@ -61,7 +61,7 @@ void abort(void)
 //extern unsigned int general_timer_mS;
 extern int timer_2mS;
 float vout; //variabili dichiarate per la stampa a video
-float volt_signal_1;
+
 
  //vettore prova sensore
 const int vettP[10]={3, -3, 3, 3};
@@ -182,16 +182,16 @@ void main(void)
     				// il segnale di controllo che invieremo ai motori.
     				calcPID(&PID_P_curr_1);
 
-    				volt_signal_1 = PID_P_curr_1.output;
+    				volt_signal= PID_P_curr_1.output;
 
 
 
     				/* Controllo del verso di rotazione */
-    				motor_direction(volt_signal_1);
+    				motor_direction(volt_signal);
 
     				/* Calcolo del Duty-Cycle da inviare ai motori */
-    				DutyCycle_to_Motor(volt_signal_1);
-    				sprintf((char *)lcd_buffer, "OUT=%f",volt_signal_1);
+    				DutyCycle_to_Motor(volt_signal);
+    				sprintf((char *)lcd_buffer, "OUT=%f",volt_signal);
     				    				lcd_display(LCD_LINE6, lcd_buffer);
     			}
     		}/* Fine ciclo acquisizione dati e controllo (2ms)*/
